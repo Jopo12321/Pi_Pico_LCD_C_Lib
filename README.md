@@ -91,7 +91,7 @@ In 8-bit mode, all eight data lines (D0 to D7) are used. This provides faster co
 #define LCD_D7 7     // Data pin D7
 
 int main() {
-    // 4-bit initialization
+    // 8-bit initialization
     LCD_Handle *lcd = lcd_init_8bit(LCD_COLS, LCD_ROWS, LCD_5x8DOTS, LCD_RS, LCD_RW, LCD_EN, LCD_D0, LCD_D1, LCD_D2, LCD_D3, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
         
     // Print a message
