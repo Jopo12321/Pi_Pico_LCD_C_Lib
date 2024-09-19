@@ -63,5 +63,12 @@ target_compile_definitions(Example PRIVATE
 	PICO_DEFAULT_UART_RX_PIN=17
 	)
 
+target_compile_options(Example PUBLIC
+    ### Gnu/Clang C Options
+    $<$<COMPILE_LANG_AND_ID:C,GNU>:-fdiagnostics-color=always>
+    $<$<COMPILE_LANG_AND_ID:C,Clang>:-fcolor-diagnostics>
+    $<$<COMPILE_LANG_AND_ID:C,Clang,GNU>:-Wall>
+    )
+
 pico_add_extra_outputs(Example)
 
